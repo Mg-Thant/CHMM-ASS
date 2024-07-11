@@ -4,12 +4,10 @@ const { posts } = require("./admin");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.render("homePage", { title: "HomePage", postArr: posts });
-});
+const postController = require("../controllers/posts")
 
-router.get("/post", (req, res) => {
-  res.render("postPage", { title: "Post Page" });
-});
+router.get("/", postController.getPosts);
+
+router.get("/post/:postId", postController.getPost);
 
 module.exports = router;
