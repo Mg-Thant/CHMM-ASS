@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="homePage">
+      <h1 class="title">HomePage</h1>
+      <p class="post-desc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta vero ex
+        fugiat neque dolorem aperiam provident libero reiciendis. Maxime
+        reiciendis, neque alias in officiis hic placeat cum mollitia fuga.
+        Velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+        sed deleniti neque quam voluptate mollitia quia voluptatibus eaque
+        distinctio nisi rem architecto officia inventore nihil qui, delectus,
+        nesciunt illo. Fugiat.
+      </p>
+      <a href="" class="button">Add new post</a>
+      <hr />
+      <% if(postArr.length === 0) { %>
+      <div>
+        <h2 class="title">Nothing to see ?</h2>
+        <p class="post-desc">Create a new post now !!!</p>
+        <a class="n-btn" href="/admin/create-post">Create a new post</a>
+      </div>
+      <% } %> <% for(let post of postArr) { %>
+        <div class="post-box">
+            <p class="post-title"><%= post.title %></p>
+            <p class="post-des"><%= post.description %></p>
+          </div>
+      <% } %>
+    </div>
+  </body>
+</html>
