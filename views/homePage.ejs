@@ -10,7 +10,7 @@
     voluptate mollitia quia voluptatibus eaque distinctio nisi rem architecto
     officia inventore nihil qui, delectus, nesciunt illo. Fugiat.
   </p>
-  <a href="" class="button">Add new post</a>
+  <a href="/admin/create-post" class="btn">Add new post</a>
   <hr />
   <% if(postArr.length === 0) { %>
   <div>
@@ -21,7 +21,7 @@
   <% } %> <% for(let post of postArr) { %>
   <div class="post-box">
     <p class="post-title"><%= post.title %></p>
-    <a class="btn" href="/post/<%= post.id %>">See More...</a>
+    <a href="/post/<%= post.id %>">See More...</a>
   </div>
   <% } %>
 </div>
