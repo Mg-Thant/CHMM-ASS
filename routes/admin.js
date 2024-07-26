@@ -10,6 +10,6 @@ router.get("/post-edit/:postId", postController.renderEditPage)
 
 router.post("/", postController.createPost);
 router.post("/post/:postId", postController.deletePost);
-router.post("/post-edit/:id", postController.updatePost)
+router.post("/post-edit", postController.updatePost)
 
 module.exports = {adminRoutes : router};
